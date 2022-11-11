@@ -19,12 +19,13 @@ for idx, text in enumerate(labels):
 
 entryRegular = tk.Entry(master=frm_form, width=50)
 entryRegular.grid(row=0, column=1)
+entryRegular.insert(INSERT, '\d\d\.\d\d\.\d{4}')
 
 entryText = tk.Entry(master=frm_form, width=50)
 entryText.grid(row=1, column=1)
+entryText.insert(INSERT, "Эта строка написана 19.01.2018, а могла бы и 01.09.2017")
 
-
-textTk = tk.Text(window)
+textTk = tk.Text(window, width = 60, height = 5, wrap = "none")
 textTk.pack(side=tk.BOTTOM)
 
 
